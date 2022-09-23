@@ -1,3 +1,18 @@
+:root {
+  --primary: #F92300;
+  --on-primary: #FFFFFF;
+  --secondary: #000000;
+  --on-secondary: #000000;
+  --primary-text: #FFFFFF;
+  --secondary-text: #BBBBBB;
+
+  --header: #FFFFFF;
+  --main: #FEDED9;
+  --footer: #000000;
+
+  --shadow: 0 1px 5px #00000044;
+}
+
 html, body {
   height: 100%;
 }
@@ -9,13 +24,19 @@ html, body {
 }
 
 header {
+  background-color: var(--header);
+  box-shadow: var(--shadow);
+  position: sticky;
   height: 50px;
 }
 
 main {
   flex: 1 1 auto;
+  background-color: var(--main);
 }
 
 footer {
+  background-color: var(--footer);
+  color: var(--secondary-text);
   height: 50px;
 }
