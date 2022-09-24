@@ -1,3 +1,5 @@
+@import url("/fonts/fonts.css");
+
 :root {
   --primary: #F92300;
   --on-primary: #FFFFFF;
@@ -13,7 +15,25 @@
   --shadow: 0 1px 5px #00000044;
 }
 
-html, body {
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font: italic bold 52pt/0 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: normal bold 36pt/0 'Montserrat', sans-serif;
+}
+
+h3 {
+  font: italic bold 16pt/0 'Montserrat', sans-serif;
+}
+
+html,
+body {
   height: 100%;
 }
 
