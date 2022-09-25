@@ -4,7 +4,7 @@
   --primary: #F92300;
   --on-primary: #FFFFFF;
   --secondary: #000000;
-  --on-secondary: #000000;
+  --on-secondary: #FFFFFF;
   --primary-text: #FFFFFF;
   --secondary-text: #BBBBBB;
 
@@ -15,26 +15,11 @@
   --shadow: 0 1px 5px #00000044;
 }
 
-* {
-  font-family: 'Montserrat', sans-serif;
-}
-
-h1 {
-  font: italic bold 52pt/0 'Montserrat', sans-serif;
-  text-transform: uppercase;
-}
-
-h2 {
-  font: normal bold 36pt/0 'Montserrat', sans-serif;
-}
-
-h3 {
-  font: italic bold 16pt/0 'Montserrat', sans-serif;
-}
-
 html,
 body {
   height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14pt;
 }
 
 .wrapper {
@@ -43,11 +28,76 @@ body {
   flex-direction: column;
 }
 
-header {
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--header);
-  box-shadow: var(--shadow);
-  position: sticky;
+  text-transform: lowercase;
+  font-size: 16pt;
+  padding: 0 1rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
   height: 50px;
+  margin: 0 1rem 0 0;
+}
+
+.header__logo-text {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  background: linear-gradient(to right, var(--primary), var(--primary) 50%, #000000 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+
+.header__logo-text:hover {
+  background-position: 0 100%;
+}
+
+.vk-link {
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.vk-link {
+  letter-spacing: 0;
+}
+
+.vk-link:after {
+  backface-visibility: hidden;
+  border: 1px solid #0000;
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.vk-link:hover:after {
+  backface-visibility: hidden;
+  border-color: #000;
+  transition: width 350ms ease-in-out;
+  width: 100%;
 }
 
 main {
