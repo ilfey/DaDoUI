@@ -9,7 +9,9 @@
   --secondary-text: #BBBBBB;
 
   --header: #FFFFFF;
-  --main: #FEDED9;
+  --concert: #FFFFFF;
+  --artists: #FFFFFF;
+  --photo: #FEDED9;
   --footer: #000000;
 
   --shadow: 0 1px 5px #00000044;
@@ -18,8 +20,8 @@
 html,
 body {
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14pt;
+  line-height: 1.15;
+  font: 14pt 'Montserrat', sans-serif;
 }
 
 .wrapper {
@@ -42,6 +44,7 @@ body {
 .header__logo {
   display: flex;
   align-items: center;
+  font-size: 16pt;
 }
 
 .header__logo img {
@@ -53,7 +56,7 @@ body {
   position: relative;
   display: inline-block;
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   overflow: hidden;
   background: linear-gradient(to right, var(--primary), var(--primary) 50%, #000000 50%);
   background-clip: text;
@@ -75,6 +78,7 @@ body {
   position: relative;
   text-decoration: none;
   text-transform: lowercase;
+  transition: all 275ms ease-in-out;
 }
 
 .vk-link {
@@ -83,24 +87,24 @@ body {
 
 .vk-link:after {
   backface-visibility: hidden;
-  border: 1px solid #0000;
-  bottom: 0px;
+  border: 1px solid transparent;
   content: " ";
   display: block;
   margin: 0 auto;
-  position: relative;
-  transition: all 280ms ease-in-out;
+  transition: all 275ms ease-in-out;
   width: 0;
 }
 
+.vk-link:hover {
+  color: var(--primary);
+}
+
 .vk-link:hover:after {
-  backface-visibility: hidden;
-  border-color: #000;
-  transition: width 350ms ease-in-out;
+  border-color: var(--primary);
   width: 100%;
 }
 
-main {
+.main {
   flex: 1 1 auto;
   background-color: var(--main);
 }
